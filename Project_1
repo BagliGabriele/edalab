@@ -15,3 +15,63 @@
 
 </body>
 </html>
+Ricorda di sostituire "Il mio Titolo" con il titolo desiderato e di inserire il percorso corretto per l'immagine nel tag <img src="...">. L'attributo alt dovrebbe contenere una breve descrizione dell'immagine per scopi di accessibilità.
+
+
+
+
+User
+scrivimi un codice html con sfondo azzurro titolo e paragrafo e riquadro per aggiungere immagine
+ChatGPT
+Certamente! Ecco un esempio di codice HTML che ha uno sfondo azzurro, un titolo, un paragrafo e un riquadro per aggiungere un'immagine:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mia Pagina con Sfondo Azzurro</title>
+    <style>
+        body {
+            background-color: #add8e6; /* Colore azzurro per lo sfondo */
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: #fff; /* Colore bianco per il titolo */
+        }
+
+        p {
+            color: #333; /* Colore grigio scuro per il testo */
+        }
+
+        #riquadroImmagine {
+            border: 2px solid #333; /* Bordo grigio scuro per il riquadro dell'immagine */
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #riquadroImmagine img {
+            max-width: 100%; /* L'immagine non supererà la larghezza del riquadro */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Centrare l'immagine all'interno del riquadro */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Titolo della Pagina</h1>
+
+    <p>Questo è un paragrafo di testo. Puoi scrivere qui qualsiasi cosa vuoi comunicare sulla tua pagina web.</p>
+
+    <div id="riquadroImmagine">
+        <img src="link_alla_tua_immagine.jpg" alt="Descrizione dell'immagine">
+    </div>
+
+</body>
+</html>
