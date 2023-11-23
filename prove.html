@@ -1,25 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
-<style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La mia Pagina con Sfondo Azzurro</title>
+    <style>
+        body {
+            background-color: #add8e6; /* Colore azzurro per lo sfondo */
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
 
-header {
-  text-align: center;
-  padding: 20px;
-  background-color: lightgray;
-}
-</style>
+        h1 {
+            color: #fff; /* Colore bianco per il titolo */
+        }
+
+        p {
+            color: #333; /* Colore grigio scuro per il testo */
+        }
+
+        #riquadroImmagine {
+            border: 2px solid #333; /* Bordo grigio scuro per il riquadro dell'immagine */
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #riquadroImmagine img {
+            max-width: 100%; /* L'immagine non supererà la larghezza del riquadro */
+            height: auto;
+            display: block;
+            margin: 0 auto; /* Centrare l'immagine all'interno del riquadro */
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Header al centro dello schermo</h1>
-  </header>
+
+    <h1>Titolo della Pagina</h1>
+
+    <p>Questo è un paragrafo di testo. Puoi scrivere qui qualsiasi cosa vuoi comunicare sulla tua pagina web.</p>
+
+    <div id="riquadroImmagine">
+        <img src="https://via.placeholder.com/300" alt="Descrizione dell'immagine">
+    </div>
+
 </body>
 </html>
