@@ -3,35 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Titolo della Pagina</title>
-</head>
-<body>
-
-    <h1>Il mio Titolo</h1>
-
-    <p>Questo è un paragrafo di testo. Puoi scrivere qui qualsiasi cosa vuoi comunicare sulla tua pagina web.</p>
-
-    <img src="link_alla_tua_immagine.jpg" alt="Descrizione dell'immagine">
-
-</body>
-</html>
-Ricorda di sostituire "Il mio Titolo" con il titolo desiderato e di inserire il percorso corretto per l'immagine nel tag <img src="...">. L'attributo alt dovrebbe contenere una breve descrizione dell'immagine per scopi di accessibilità.
-
-
-
-
-User
-scrivimi un codice html con sfondo azzurro titolo e paragrafo e riquadro per aggiungere immagine
-ChatGPT
-Certamente! Ecco un esempio di codice HTML che ha uno sfondo azzurro, un titolo, un paragrafo e un riquadro per aggiungere un'immagine:
-
-html
-Copy code
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La mia Pagina con Sfondo Azzurro</title>
     <style>
         body {
@@ -70,7 +41,7 @@ Copy code
     <p>Questo è un paragrafo di testo. Puoi scrivere qui qualsiasi cosa vuoi comunicare sulla tua pagina web.</p>
 
     <div id="riquadroImmagine">
-        <img src="link_alla_tua_immagine.jpg" alt="Descrizione dell'immagine">
+        <img src="https://via.placeholder.com/300" alt="Descrizione dell'immagine">
     </div>
 
 </body>
