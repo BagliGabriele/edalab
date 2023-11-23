@@ -21,16 +21,15 @@
         }
 
         #riquadroImmagine {
-            border: 2px solid #333; /* Bordo grigio scuro per il riquadro dell'immagine */
-            padding: 5px;
-            margin-top: 5px;
+            display: flex; /* Utilizza un layout flessibile per posizionare le immagini affiancate */
         }
 
         #riquadroImmagine img {
-            max-width: 100%; /* L'immagine non supererà la larghezza del riquadro */
-            height: auto;
-            display: ;
-            margin: 0 auto; /* Centrare l'immagine all'interno del riquadro */
+            width: 30%; /* Riduci la larghezza al 30% */
+            height: auto; /* L'altezza si adatta automaticamente per mantenere le proporzioni originali */
+            object-fit: cover; /* Mantiene le proporzioni e riempie completamente il riquadro */
+            display: inline-block; /* Per permettere l'affiancamento delle immagini */
+            margin: 5px; /* Aggiungi un po' di spazio tra le immagini */
         }
     </style>
 </head>
@@ -42,6 +41,7 @@
 
     <div id="riquadroImmagine">
         <img src="https://www.studiomedicoaloe.it/wp/wp-content/uploads/2020/01/elettrocardiogramma-reaparto-infermieristica-ok-300x300.png" alt="Descrizione dell'immagine">
+        <img src="https://via.placeholder.com/301x265" alt="Descrizione dell'immagine">
     </div>
 
 </body>
