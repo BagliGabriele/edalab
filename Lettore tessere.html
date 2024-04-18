@@ -36,12 +36,15 @@
         #downloadLink {
             margin-top: 20px;
             text-align: left;
+            color: #fff; /* Colore bianco per il testo */
+            background-color: #333; /* Colore grigio scuro per lo sfondo del link */
+            padding: 10px 20px; /* Spaziatura interna per il link */
+            text-decoration: none; /* Rimuovi la sottolineatura */
+            border-radius: 5px; /* Bordi arrotondati */
         }
 
-        #riquadroImmagine .casellaImmagine {
-            width: 301px;
-            height: 300px;
-            margin: 6px;
+        #downloadLink:hover {
+            background-color: #555; /* Cambia il colore dello sfondo al passaggio del mouse */
         }
     </style>
 </head>
@@ -53,14 +56,10 @@
 
     <div id="riquadroImmagine">
         <img src="schema arduino lettore.jpeg">
-        <img src="immagine script lettore.jpeg">
-       
+        <img src="immagine script lettore.jpeg">   
     </div>
 
-    <!-- Link per scaricare il file di testo -->
-    <div id="downloadLink">
-        <a href="#" id="downloadTxtLink" download="script lettore di carte.txt">Download Script Lettore Tessere</a>
-    </div>
+    <a id="downloadLink" href="script lettore carte.txt" download>Download script lettore tessere.txt</a>
 
 </body>
 </html>
