@@ -1,57 +1,66 @@
-#include <SPI.h>
-#include <MFRC522.h>
- 
-#define SS_PIN 10
-#define RST_PIN 9
-MFRC522 mfrc522(SS_PIN, RST_PIN);
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lettore Tessere</title>
+    <style>
+        body {
+            background-color: #007bff; /* Colore azzurro per lo sfondo */
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
 
-const int ledGreen =  7;
-const int ledRed =  6;
+        h1 {
+            color: #fff; /* Colore bianco per il titolo */
+        }
 
-void setup() 
-{
-  pinMode(ledGreen, OUTPUT);
-  pinMode(ledRed, OUTPUT);
-  Serial.begin(9600);
-  SPI.begin();
-  mfrc522.PCD_Init();
-  Serial.println("Approximate your card to the reader...");
-  Serial.println();
-}
-void loop() 
-{
-  if ( ! mfrc522.PICC_IsNewCardPresent()) 
-  {
-    return;
-  }
-  if ( ! mfrc522.PICC_ReadCardSerial()) 
-  {
-    return;
-  }
+        p {
+            color: #333; /* Colore grigio scuro per il testo */
+        }
 
-  String content= "";
-  byte letter;
-  for (byte i = 0; i < mfrc522.uid.size; i++) 
-  {
-     content.concat(String(mfrc522.uid.uidByte[i] < 0x10 ? " 0" : " "));
-     content.concat(String(mfrc522.uid.uidByte[i], HEX));
-  }
-  Serial.println();
-  Serial.print("Message : ");
-  content.toUpperCase();
-  if (content.substring(1) == "53 14 5F FC")
-  {
-    Serial.println("Authorized access");
-    digitalWrite(ledGreen, HIGH);
-  }
-  else 
-  {
-    Serial.println(" Access denied");
-    digitalWrite(ledRed, HIGH);
-  }
+        #riquadroImmagine {
+            display: flex; /* Utilizza un layout flessibile per posizionare le immagini affiancate */
+            flex-wrap: wrap; /* Per andare a capo se lo spazio non è sufficiente */
+        }
 
-  delay(1000);
+        #riquadroImmagine img {
+            width: 30%; /* Riduci la larghezza al 30% */
+            height: auto; /* L'altezza si adatta automaticamente per mantenere le proporzioni originali */
+            object-fit: cover; /* Mantiene le proporzioni e riempie completamente il riquadro */
+            display: inline-block; /* Per permettere l'affiancamento delle immagini */
+            margin: 5px; /* Aggiungi un po' di spazio tra le immagini */
+        }
 
-  digitalWrite(ledGreen, LOW);
-  digitalWrite(ledRed, LOW);
-} 
+        #downloadLink {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #riquadroImmagine .casellaImmagine {
+            width: 301px;
+            height: 265px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lettore di Tessere</h1>
+
+    <p>Rilevazione real-time dei segni vitali tramite raccolta dei segnali ECG e PPG e successiva elaborazione tramite algoritmi di machine learning</p>
+
+    <div id="riquadroImmagine">
+        <img src="ecggg...png">
+        <img src="immagine 3.jpeg">
+       
+    </div>
+
+    <!-- Link per scaricare il file di testo -->
+    <div id="downloadLink">
+        <a href="#" id="downloadTxtLink" download="script lettore di carte.txt">Download Script Lettore Tessere</a>
+    </div>
+
+</body>
+</html>
