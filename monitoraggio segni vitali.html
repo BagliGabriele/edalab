@@ -32,6 +32,20 @@
             display: inline-block; /* Per permettere l'affiancamento delle immagini */
             margin: 5px; /* Aggiungi un po' di spazio tra le immagini */
         }
+
+        #downloadLink {
+            display: block; /* Mostra il link come blocco per renderlo su una riga separata */
+            color: #fff; /* Colore bianco per il testo */
+            background-color: #333; /* Colore grigio scuro per lo sfondo del link */
+            padding: 10px 20px; /* Spaziatura interna per il link */
+            text-decoration: none; /* Rimuovi la sottolineatura */
+            margin-top: 20px; /* Aggiungi spazio sopra il link */
+            border-radius: 5px; /* Bordi arrotondati */
+        }
+
+        #downloadLink:hover {
+            background-color: #555; /* Cambia il colore dello sfondo al passaggio del mouse */
+        }
     </style>
 </head>
 <body>
@@ -51,6 +65,8 @@
         <img src="grafico.jpeg">
         <img src="ecggg...png">
     </div>
+
+    <a id="downloadLink" href="script monitoraggio segni vitali.txt" download>Download script monitoraggio segni vitali</a>
 
 </body>
 </html>
